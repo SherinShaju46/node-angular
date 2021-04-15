@@ -86,13 +86,13 @@ export class PostCreateComponent implements OnInit, OnDestroy {
     const file = (event.target as HTMLInputElements).files[0];
     this.form.patchValue({image: file});
     this.form.get('image').updateValueAndValidity();
-    for(let i=0; i<file.length; i++){
+    //for(let i=0; i<file.length; i++){
       const reader= new FileReader();
       reader.onload = () => {
         this.imagePreview = reader.result;
         //this.imagePreview2= reader.result;
       };
-    }
+    //}
 
     reader.readAsDataURL(file);
   }

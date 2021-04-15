@@ -104,9 +104,6 @@ export class PostsService {
   deletePost(postId: string) {
     return this.http
       .delete(BACKEND_URL + postId)
-      .subscribe(response => {
-        this.router.navigate(["/"]);
-      });
   }
 
 }
